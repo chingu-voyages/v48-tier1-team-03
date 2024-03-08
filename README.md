@@ -38,6 +38,8 @@ coding!
 
 - Istvan: [GitHub](https://github.com/designbyistvan)
 
+- Dragan [GitHub](https://github.com/sevic90).
+
   ...
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
