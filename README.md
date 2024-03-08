@@ -34,8 +34,9 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
-- Nadeem (nad): [GitHub](https://github.com/707) 
-- Teammate name #2: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Nadeem (nad): [GitHub](https://github.com/707)
+
+- Istvan: [GitHub](https://github.com/designbyistvan)
 
   ...
 
