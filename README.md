@@ -43,7 +43,7 @@ coding!
   ...
 
 
-- Lithakazi (Litha): [GitHub](https://github.com/Lithakazi101) / [LinkedIn](www.linkedin.com/in/lithakazi-sikwana-061068225
+- Lithakazi (Litha): [GitHub](https://github.com/Lithakazi101) / [LinkedIn](www.linkedin.com/in/lithakazi-sikwana-061068225 
 
 )
 
