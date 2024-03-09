@@ -42,4 +42,9 @@ coding!
 
   ...
 
+
+- Lithakazi (Litha): [GitHub](https://github.com/Lithakazi101) / [LinkedIn](www.linkedin.com/in/lithakazi-sikwana-061068225
+
+)
+
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
