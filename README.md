@@ -35,6 +35,8 @@ your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 - Nadeem (nad): [GitHub](https://github.com/707)
+- Preethi :[GitHub](https://github.com/jerry2405)
+  
 
 - Istvan: [GitHub](https://github.com/designbyistvan)
 
