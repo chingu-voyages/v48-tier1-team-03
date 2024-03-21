@@ -49,4 +49,6 @@ coding!
 
 )
 
+- Bastien (bastien_winant): [Github](https://github.com/BastienWinant) / [LinkedIn](www.linkedin.com/in/winant)
+
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
