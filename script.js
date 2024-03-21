@@ -42,23 +42,13 @@ function entryCard(entry) {
   cardEl.classList.add("card");
   containerEl.appendChild(cardEl);
 
-  const cardImg = document.createElement("img");
-  cardImg.classList.add("card-img-top", "object-fit-cover");
-  cardImg.src = entry.imageSrc;
-  cardEl.appendChild(cardImg);
-
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
   
   const cardTitle = document.createElement("h5");
-  cardTitle.classList.add("card-title");
+  cardTitle.classList.add("card-title", "mb-0", "text-center");
   cardTitle.innerText = entry.name;
   cardBody.appendChild(cardTitle);
-
-  const cardSubtitle = document.createElement("h6");
-  cardSubtitle.classList.add("card-subtitle", "mark");
-  cardSubtitle.innerText = entry.typeOfDinosaur;
-  cardBody.appendChild(cardSubtitle);
 
   cardEl.appendChild(cardBody);
 
