@@ -389,7 +389,7 @@ modal.addEventListener("show.bs.modal", function (event) {
   const modalTypeSpecies = modal.querySelector(".dino-type-species");
   const modalDescription = modal.querySelector(".dino-description");
 
-  modalTitle.textContent = selectedDino.name;
+  modalTitle.textContent = "Dinosaur Details";
   modalImage.src = selectedDino.imageSrc;
   modalName.textContent = selectedDino.name;
   modalType.textContent = `Type: ${selectedDino.typeOfDinosaur}`;
