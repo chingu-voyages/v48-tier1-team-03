@@ -1,0 +1,9 @@
+.card {
+    margin-top: 20px;
+    cursor: pointer;
+}
+  
+.card-img-top {
+    height: 200px;
+    object-position: center top;
+}
