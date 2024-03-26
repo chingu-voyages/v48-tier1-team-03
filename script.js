@@ -358,14 +358,21 @@ function entryCard(dino) {
   return containerEl;
 }
 
-// Loop through the data
-data.forEach((dino) => {
-    // Create the card element using the entryCard function
-    const card = entryCard(dino);
-  
-    // Append the card to the container
-    cardContainer.appendChild(card);
-  });
+function displayCards(substr) {
+  // Remove the current cards from the container
+  cardContainer.innerHTML = "";
+
+  // Loop through the data
+  data.forEach((dino) => {
+      if (dino.name.includes(substr)) {
+        // Create the card element using the entryCard function
+        const card = entryCard(dino);
+
+        // Append the card to the container
+        cardContainer.appendChild(card);
+      }
+    });
+  };
 
 
 // Add event listener for modal
@@ -398,4 +405,25 @@ modal.addEventListener("show.bs.modal", function (event) {
   modalWhenLived.textContent = `When Lived: ${selectedDino.whenLived}`;
   modalTypeSpecies.textContent = `Type Species: ${selectedDino.typeSpecies}`;
   modalDescription.textContent = `Description: ${selectedDino.description}`;
+});
+
+// Get the search field
+const searchInput = document.getElementById("search");
+
+// EVENT LISTENERS
+search.addEventListener("input", () => {
+  // navigate to the page grid
+  cardContainer.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest"
+  });
+
+  // filter grid entries and update HTML entries
+  const searchValue = search.value;
+  displayCards(searchValue);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  displayCards("");
 });
