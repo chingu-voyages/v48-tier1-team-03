@@ -1,12 +1,3 @@
-// Get the carousel buttons
-const carouselBtns = document.getElementsByClassName("carousel-btn");
-
-for (const btn of carouselBtns) {
-  btn.addEventListener("click", function(e) {
-    console.log("button was clicked");
-  })
-}
-
 // Get the container
 const cardContainer = document.getElementById("dinoCards");
 
