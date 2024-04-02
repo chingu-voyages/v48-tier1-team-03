@@ -9,5 +9,12 @@
 }
 
 .carousel-img {
-    height: 550px;
+    height: 400px;
+    object-position: center center;
+}
+
+@media (min-width: 768px) {
+    .carousel-img {
+        height: 450px;
+    }
 }
