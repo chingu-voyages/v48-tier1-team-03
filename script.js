@@ -41,66 +41,56 @@ function entryCard(dino) {
 
 
 // Data
-// URL of the JSON data
-const url = 'https://chinguapi.onrender.com/dinosaurs';
-
-// Fetch the JSON data
-fetch(url)
-  .then(response => {
-    // Check if the request was successful
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    // Parse the JSON response
-    return response.json();
-  })
+// Fetch the JSON dat
+fetch('data.json')
+  .then(response => response.json())
   .then(data => {
-    // Use the JSON data
-    console.log(data);
-    // Loop through the data
-    data.forEach((dino) => {
-  // Create the card element using the entryCard function
-  const card = entryCard(dino);
+    console.log(data); // Use the JSON data here
+        // Loop through the data
+        data.forEach((dino) => {
+          // Create the card element using the entryCard function
+          const card = entryCard(dino);
+        
+          // Append the card to the container
+          cardContainer.appendChild(card);
+        });
+            // Further processing of the data here
+            // Add event listener for modal
+        const modal = document.getElementById("dinoModal");
+        
+        modal.addEventListener("show.bs.modal", function (event) {
+          // Button
+          const button = event.relatedTarget;
+          // Extract data-id 
+          const dinoId = button.getAttribute("data-id");
+          // Find the dinosaur object
+          const selectedDino = data.find((dino) => dino.id.toString() === dinoId);
+          
+          // Update modal content with the dinosaur's details
+          const modalTitle = modal.querySelector(".modal-title");
+          const modalImage = modal.querySelector(".dino-img");
+          const modalName = modal.querySelector(".dino-name");
+          const modalType = modal.querySelector(".dino-type");
+          const modalLength = modal.querySelector(".dino-length");
+          const modalDiet = modal.querySelector(".dino-diet");
+          const modalWhenLived = modal.querySelector(".dino-when-lived");
+          const modalTypeSpecies = modal.querySelector(".dino-type-species");
+          const modalDescription = modal.querySelector(".dino-description");
+        
+          modalTitle.textContent = "Dinosaur Details";
+          modalImage.src = selectedDino.imageSrc;
 
-  // Append the card to the container
-  cardContainer.appendChild(card);
-});
-    // Further processing of the data here
-    // Add event listener for modal
-const modal = document.getElementById("dinoModal");
-
-modal.addEventListener("show.bs.modal", function (event) {
-  // Button
-  const button = event.relatedTarget;
-  // Extract data-id 
-  const dinoId = button.getAttribute("data-id");
-  // Find the dinosaur object
-  const selectedDino = data.find((dino) => dino.id.toString() === dinoId);
-  // Update modal content with the dinosaur's details
-  const modalTitle = modal.querySelector(".modal-title");
-  const modalImage = modal.querySelector(".dino-img");
-  const modalName = modal.querySelector(".dino-name");
-  const modalType = modal.querySelector(".dino-type");
-  const modalLength = modal.querySelector(".dino-length");
-  const modalDiet = modal.querySelector(".dino-diet");
-  const modalWhenLived = modal.querySelector(".dino-when-lived");
-  const modalTypeSpecies = modal.querySelector(".dino-type-species");
-  const modalDescription = modal.querySelector(".dino-description");
-
-  modalTitle.textContent = "Dinosaur Details";
-  modalImage.src = selectedDino.imageSrc;
-  modalName.textContent = selectedDino.name;
-  modalType.textContent = `Type: ${selectedDino.typeOfDinosaur}`;
-  modalLength.textContent = `Length: ${selectedDino.length} meters`;
-  modalDiet.textContent = `Diet: ${selectedDino.diet}`;
-  modalWhenLived.textContent = `When Lived: ${selectedDino.whenLived}`;
-  modalTypeSpecies.textContent = `Type Species: ${selectedDino.typeSpecies}`;
-  modalDescription.textContent = `Description: ${selectedDino.description}`;
-});
+          modalName.textContent = selectedDino.name;
+          modalType.textContent = `Type: ${selectedDino.typeOfDinosaur}`;
+          modalLength.textContent = `Length: ${selectedDino.length} meters`;
+          modalDiet.textContent = `Diet: ${selectedDino.diet}`;
+          modalWhenLived.textContent = `When Lived: ${selectedDino.whenLived}`;
+          modalTypeSpecies.textContent = `Type Species: ${selectedDino.typeSpecies}`;
+          modalDescription.textContent = `Description: ${selectedDino.description}`;
+        });
   })
   .catch(error => {
-    // Handle errors
-    console.error('There was a problem with the fetch operation:', error);
+    console.error('Error fetching JSON:', error);
   });
 
 
@@ -108,3 +98,5 @@ modal.addEventListener("show.bs.modal", function (event) {
 
 
 
+
+  
