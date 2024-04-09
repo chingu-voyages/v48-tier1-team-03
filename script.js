@@ -31,7 +31,6 @@ function renderCards(searchStr) {
                 <img src="${entry.imageSrc}" class="card-img opacity-25" alt="...">
                 <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
                   <h5 class="card-title display-6 fs-3">${entry.name}</h5>
-                  <!--<p class="card-text">${entry.description}</p> -->
                   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dinoModal" data-id=${entry.id}>Learn More</a>
                 </div>
               </div>
