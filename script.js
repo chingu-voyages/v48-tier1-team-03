@@ -67,69 +67,93 @@ gridModal.addEventListener("show.bs.modal", (event) => {
   modalImg.setAttribute("src", entryObject.imageSrc);
   modalTitle.innerText = entryObject.name;
   modalSubtitle.innerText = entryObject.typeOfDinosaur;
-
-  modalBody.innerHTML = `<div class="row text-capitalize">
-                          <div class="col border fw-bold">
+  
+  modalBody.innerHTML = `<div class="row text-capitalize mt-2">
+                          <div class="col pb-3 fw-bold">
                             Name:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.name}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Type:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.typeOfDinosaur}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Species:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.typeSpecies}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Era:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.whenLived}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Found In:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.foundIn}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Diet:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.diet}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Length:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.length}
                           </div>
                         </div>
                         <div class="row text-capitalize">
-                          <div class="col border fw-bold">
+                          <div class="col pb-3 fw-bold">
                             Weight:
                           </div>
-                          <div class="col border">
+                          <div class="col">
                             ${entryObject.weight}
+                          </div>
+                        </div>
+                        <div class="row text-capitalize">
+                          <div class="col pb-3 fw-bold">
+                            Taxonomy:
+                          </div>
+                          <div class="col">
+                            ${entryObject.taxonomy}
+                          </div>
+                        </div>
+                        <div class="row text-capitalize">
+                          <div class="col pb-3 fw-bold">
+                            Named by:
+                          </div>
+                          <div class="col">
+                            ${entryObject.namedBy}
+                          </div>
+                        </div>
+                        <div class="row text-capitalize">
+                          <div class="col pb-3 fw-bold">
+                            Description:
+                          </div>
+                          <div class="col-12">
+                            ${entryObject.description}
                           </div>
                         </div>`;
 });
