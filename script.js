@@ -1,9 +1,11 @@
 // Get the container
 const cardContainer = document.getElementById("dinoCards");
 
+const readMoreButton  = document.getElementById('readMore');
 // Get the search field
 const searchInput = document.getElementById("search");
 
+let lastIndex = 0;
 // Function to create card element for each dino entry
 function entryCard(dino) {
   // Create the container element
@@ -45,16 +47,18 @@ function entryCard(dino) {
 
 // Data
 // Fetch the JSON dat
-function displayCards(substr){
+function displayCards(substr ){
 fetch('data.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data); // Use the JSON data here\
+    console.log(data); 
+    // Use the JSON data here
       // Remove the current cards from the container
         cardContainer.innerHTML = "";
+        const itemsToLoad = data.slice(lastIndex, lastIndex + 6);
 
         // Loop through the data
-        data.forEach((dino) => {
+        itemsToLoad.forEach((dino) => {
           if (dino.name.includes(substr)) {
           // Create the card element using the entryCard function
           const card = entryCard(dino);
@@ -63,8 +67,26 @@ fetch('data.json')
           cardContainer.appendChild(card);
           }
         });
+        
+        lastIndex += itemsToLoad.length;
+        
+        function loadMoreItems(){
+              // Get the next 9 items from the JSON data starting from lastIndex
+            const itemsToLoad = data.slice(lastIndex, lastIndex + 9);
+            
+            // Iterate over the items using forEach
+            itemsToLoad.forEach(item => {
+                const card = entryCard(item);
+                cardContainer.appendChild(card);
+            });
+    
+            // Update lastIndex
+            lastIndex += itemsToLoad.length;
+        }
 
-
+        readMoreButton.addEventListener('click', ()=>{
+          loadMoreItems(data);
+        })
             // Further processing of the data here
             // Add event listener for modal
         const modal = document.getElementById("dinoModal");
