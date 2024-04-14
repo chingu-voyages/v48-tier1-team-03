@@ -1,54 +1,38 @@
-# voyage-tasks
+# Dino App
 
-Your project's `readme` is as important to success as your code. For
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+##  Overview
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point -
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+This app was developed as a part of the 6-week [Chingu](https://www.chingu.io/) Voyage 48 in May-April 2024. 
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## Voyage Team
 
-> Own it & Make it your Own!
+- Bastien (bastien_winant): [Github](https://github.com/BastienWinant) / [LinkedIn](www.linkedin.com/in/winant)
+- Lithakazi (Litha): [GitHub](https://github.com/Lithakazi101) / [LinkedIn](www.linkedin.com/in/lithakazi-sikwana-061068225)
+- Nadeem (nad): [GitHub](https://github.com/707) 
+- Preethi(Jerry):[GitHub](https://github.com/jerry2405)
+
+## Technologies & Dependencies
+
+To plan and manage our workflow, we used:
+
+- Figma
+- Trello
+- Discord
+
+To build the application, we used:
+
+- Bootstrap
+- Netlify
+
+## App Demo
+
+You can see our deployed Dino app [here](https://dino-app.netlify.app/).
 
 ## Team Documents
 
-You may find these helpful as you work together to organize your project.
-
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
-
-Meeting Agenda templates (located in the `/docs` directory in this repo):
-
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
-
-## Our Team
-
-Everyone on your team should add their name along with a link to their GitHub
-& optionally their LinkedIn profiles below. Do this in Sprint #1 to validate
-your repo access and to practice PR'ing with your team _before_ you start
-coding!
-
-- Nadeem (nad): [GitHub](https://github.com/707)
-- Preethi :[GitHub](https://github.com/jerry2405)
-  
-
-- Istvan: [GitHub](https://github.com/designbyistvan)
-
-- Dragan [GitHub](https://github.com/sevic90).
-
-  ...
+- [Kickoff and Planning document](https://docs.google.com/document/d/1qT5hpzWR-jKst_dDnrWMGOvEEl1QsFBK-WISaq_hfc0/edit?usp=sharing)
+- [Product Requirements document](https://docs.google.com/document/d/1tINdGVvQplassDeEAzCoUP8xxGoarUyVk6qoK9votbo/edit?usp=sharing)
+- [Product Backlog Trello Snapshot](https://ibb.co/16t6n66)
 
 
-- Lithakazi (Litha): [GitHub](https://github.com/Lithakazi101) / [LinkedIn](www.linkedin.com/in/lithakazi-sikwana-061068225 
-
-)
-
-- Bastien (bastien_winant): [Github](https://github.com/BastienWinant) / [LinkedIn](www.linkedin.com/in/winant)
-
-- Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)
+Thank you again to Chingu for giving us the opportunity to develop this project as a remote team.
