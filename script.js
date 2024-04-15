@@ -38,10 +38,18 @@ nameInput.addEventListener("input", (event) => {
   getDinosaurs()
     // filter the data based on user input
     .then(data => data.filter(entry => entry.name.includes(searchVal)))
-    // update the grid HTML content
+    // keep the first 8 elements
     .then(data => {
-    updateGrid(data);
-  });
+      if (data.length > 8) {
+        loadBtn.classList.remove("d-none");
+      } else {
+        loadBtn.classList.add("d-none");
+      }
+      return data.slice(0,8)
+    })
+    // update the grid HTML content
+    .then(data => updateGrid(data)
+  );
 
   // scroll to the grid
   dinoGrid.scrollIntoView({
@@ -50,6 +58,31 @@ nameInput.addEventListener("input", (event) => {
     inline: "nearest"
   });
 });
+
+const loadBtn = document.getElementById("more");
+loadBtn.addEventListener("click", () => {
+  const cardCount = gridContainer.childElementCount;
+
+  const searchVal = nameInput.value;
+
+  // read the data from the file
+  getDinosaurs()
+    // filter the data based on user input
+    .then(data => data.filter(entry => entry.name.includes(searchVal)))
+    // get anm additional 8 elements
+    .then(data => {
+      data = data.slice(0, cardCount + 8);
+
+      if (data.length < cardCount + 8) {
+        loadBtn.classList.add("d-none");
+      }
+
+      return data;
+    })
+    // update the grid HTML content
+    .then(data => updateGrid(data)
+  );
+})
 
 //###########
 // ## MODAL #
@@ -151,7 +184,6 @@ function renderChart(data) {
       .outerRadius(labelRadius);
 
   const arcs = pie(data);
-  console.log(arcs)
 
   // Create the SVG container.
   const svg = d3.select("#chart-container")
@@ -221,10 +253,9 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  getDinosaurs().then(data => {
-    console.log(data);
-    updateGrid(data);
-  });
+  getDinosaurs()
+    .then(data => data.slice(0,8))
+    .then(data => updateGrid(data));
 
   updateChart();
 });
