@@ -22,6 +22,7 @@ To plan and manage our workflow, we used:
 To build the application, we used:
 
 - Bootstrap
+- D3
 - Netlify
 
 ## App Demo
