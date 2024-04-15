@@ -1,24 +1,13 @@
-.card {
-    margin-top: 20px;
-    cursor: pointer;
-}
-  
-.card-img-top {
-    height: 200px;
-    object-position: center top;
-}
-
 .carousel-img {
-    height: 400px;
-    object-position: center center;
+	height: 450px;
 }
 
-@media (min-width: 768px) {
-    .carousel-img {
-        height: 450px;
-    }
+.grid-container {
+	max-height: 550px;
+	overflow-y: scroll;
 }
-button{
-    width: 380px;
-    margin-left: 120px
+
+.card-img {
+	height: 240px;
+	object-position: center;
 }
